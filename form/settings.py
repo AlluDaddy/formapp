@@ -26,9 +26,9 @@ MEDIA_URL = '/media/'
 SECRET_KEY = '$9t=&41_gjo^qx1)+34(%6e-=b_++hk%_m5tl26zw1yarpi8ou'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['DJANGO_ALLOWED_HOSTS','localhost:8000']
+ALLOWED_HOSTS = ['DJANGO_ALLOWED_HOSTS','localhost:8000', "*"]
 
 
 # Application definition
