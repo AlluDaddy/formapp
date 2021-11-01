@@ -1,0 +1,54 @@
+
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href= "{% static 'style-main.css' %}">
+
+<body>
+  <center>
+<div class="title">
+  <h1>Enligence</h1> 
+</div>
+
+<form method="post" class="uniForm"  enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for i in messages%}
+    <h5  style="position:absolute;left:40%;top:5%;color:red;">{{i}}</h5>
+          {% endfor %}
+    <form>          
+        <div class="form-group">
+          <label for="reg.no">Reg.no : </label>&ensp;<br><br>
+          <input type="text" class="form-control" name="reg" placeholder="Enter Reg.no" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="name">Name : </label>&ensp;<br><br>
+          <input type="text" class="form-control" name="name" placeholder="Enter Name" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="name">Branch & Section : </label>&ensp;<br><br>
+          <input type="text" class="form-control" name="branch" placeholder="Branch" required>
+        </div>
+ 
+        <br>
+        <div class="form-group">
+          <label for="name">Email : </label>&ensp;<br><br>
+          <input type="text" class="form-control" name="email" placeholder="Enter Email" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Ph. no : </label><br><br>
+          <input type="Phone number" class="form-control" name="phone" placeholder="Phone Number" required>
+        </div>
+        <br>
+
+        <div>
+        <label for="exampleFormControlFile1">Upload Profile : </label><br><br>
+        <input type="file" class="form-control-field" id="exampleFormControlFile1" name="images" required>
+        <button type="submit" class="button">Submit</button>
+      </div>
+      </form>
+    </form>
+  </center>  
+  </body>
